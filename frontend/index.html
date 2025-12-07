@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Finanças Pessoais</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Finanças Pessoais</h1>
+
+  <section class="form">
+    <h2>Lançamento Financeiro</h2>
+    <input type="text" id="descricao" placeholder="Descrição:">
+    <select id="select">
+    <option value="entrada">Entrada</option>
+    <option value="saida">Saida</option>
+</select>
+    <input type="date" id="data" placeholder="Data:">
+    <input type="number" step="any" id="valor" placeholder="Valor:">
+    <button onclick="lancarFinanca()">Lançar</button>
+  </section>
+
+  <section class="listar">
+    <h2>Listar lançamentos</h2>
+    <button onclick="listarLancamentos()">Listar</button>
+    <div id="resultadouser" class="lista-container"></div>
+  </section>
+
+  <section class="update">
+    <h2>Atualizar Lista de Lançamentos</h2>
+    <input type="number" id="updId" placeholder="ID do usuário">
+    <input type="text" id="updescricao" placeholder="Nova descrição:">
+    <input type="date" id="updata" placeholder="Nova data:">
+    <input type="number" id="upvalor" placeholder="Novo valor:">
+    <button onclick="atualizarlancamento()">Atualizar</button>
+  </section>
+
+  <section class="delete-by-id">
+    <h2>Deletar</h2>
+    <input type="number" id="delId" placeholder="ID do lançamento:">
+    <button onclick="deletarPorId()">Deletar por ID</button>
+  </section>
+
+  <section class="delete">
+    <h2>Deletar todos</h2>
+    <button onclick="deletarTodos()">DELETAR TODOS</button>
+  </section>
+
+  <section class="saldo">
+    <h2>Saldo</h2>
+      <button onclick="mostrarSaldo()">Mostrar Saldo</button>
+      <div id="resultadoSaldo" class="lista-container"></div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
